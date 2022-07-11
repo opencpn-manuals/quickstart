@@ -1,0 +1,10 @@
+# inland-ecdis
+OpenCPN User Manual for Inland ECDIS
+
+InlandECDIS is a standard for chart plotters on European (basicly) Inland waterways. Equipment mandatory for commercial boats and barges in those waters.
+
+There are few equipment manufacturers and OpenCPN made an effort some years ago to add the required functionalities to cover the standard. Next we did an auto-certificate of compliance, which is required for the user in order to be legal.
+
+You will find mainly two types of users and skippers on the waterways:
+Large companies with bigger fleets and hired staff and families running their barge. The latter have a very small margin to survive. This is one reason why InlandENCs are free. They just can't afford them. OpenCPN fits in that niche. 
+

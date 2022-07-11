@@ -1,0 +1,28 @@
+<div class="nav-panel-explore{{#unless page.navigation}} is-active{{/unless}}" data-panel="explore">
+  {{#if page.component}}
+  <div class="context">
+    {{#with @root.page.componentVersion}}
+    <span class="title">{{./title}}</span>
+    {{/with}}
+    <span class="version" title="title", id="site-lang"><img class=icon src="../../_/img/globe.svg">&nbsp;{{page.componentVersion.displayVersion}}</span>
+  </div>
+  {{/if}}
+  <ul class="components">
+    {{#each site.components}}
+    <li class="component{{#if (eq this @root.page.component)}} is-current{{/if}}">
+    {{#with @root.page.componentVersion}}
+      <a class="title" href="{{{relativize ./url}}}">{{{./title}}}</a>
+    {{/with}}
+      <ul class="versions">
+        {{#each ./versions}}
+        <li class="version
+          {{~#if (and (eq .. @root.page.component) (eq this @root.page.componentVersion))}} is-current{{/if~}}
+          {{~#if (eq this ../latest)}} is-latest{{/if}}">
+          <a href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+        </li>
+        {{/each}}
+      </ul>
+    </li>
+    {{/each}}
+  </ul>
+</div>

@@ -1,0 +1,5 @@
+name: inland-ecdis
+title: OpenCPN Inland Ecdis Manual
+version: 0.0
+nav:
+  - modules/ROOT/nav.adoc

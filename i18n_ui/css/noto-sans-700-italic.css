@@ -1,0 +1,8 @@
+/* noto-sans-latin-ext-700-italic */
+@font-face {
+  font-family: 'Noto Sans';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 700;
+  src: url('../font/noto-sans-latin-ext-700-italic.woff2') format('woff2');
+}

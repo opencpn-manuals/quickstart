@@ -1,0 +1,9 @@
+image: node:16.13.0
+pages:
+  only:
+  - main@opencpn-manuals/inland-ecdis
+  script:
+    - npm run clean-build
+  artifacts:
+    paths:
+    - public

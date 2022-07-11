@@ -1,0 +1,13 @@
+{{> header-scripts}}
+{{#if (eq page.version 'fr')}}
+{{> header-content-fr}}
+{{/if}}
+{{#if (eq page.version 'en')}}
+{{> header-content-en}}
+{{/if}}
+{{#if (eq page.version 'dyu')}}
+{{> header-content-dyu}}
+{{/if}}
+{{#if (eq page.version undefined)}}
+{{> header-content-fr}}
+{{/if}}

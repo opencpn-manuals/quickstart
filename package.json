@@ -1,0 +1,36 @@
+{
+  "name": "inland-ecdis",
+  "version": "1.0.0",
+  "description": "OpenCPN Inland Ecdis Manual",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "server": "npm run clean-install;npm run local",
+    "clean-build": "npm run clean-install;npm run remote",
+    "clean-install": "rm -rf node_modules/ .cache/ public/ ;npm i --cache=.cache/npm; npm run lunr; npm run gettext",
+    "bundle": "pushd ../antora-ui-i18n; SOURCEMAPS=true gulp bundle; popd;",
+    "local": "npx antora local.yml --stacktrace ; npm run http-server",
+    "docs": "npx antora local.yml  --stacktrace --fetch; npm run http-server",
+    "remote": "npx antora playbook.yml --stacktrace --fetch",
+    "lunr": "cp -pr ./node_modules/@antora/lunr-extension/supplemental_ui .",
+    "gettext": "cp ./node_modules/gettext.js/dist/gettext.iife.min.js ./supplemental_ui/js/vendor/",
+    "http-server": "node_modules/.bin/http-server ./public/"
+  },
+  "author": "Boyd Kelly",
+  "license": "ISC",
+  "dependencies": {
+    "@antora/lunr-extension": "^1.0.0-alpha.5",
+    "@antora/xref-validator": "git+https://gitlab.com/antora/xref-validator#v1.0.0-alpha.14",
+    "gettext.js": "^1.1.1",
+    "gulp-cli": "^2.3.0"
+  },
+  "devDependencies": {
+    "@antora/cli": "3.0.0",
+    "@antora/site-generator": "3.0.0",
+    "@fontsource/noto-sans": "^4.5.1",
+    "@fontsource/noto-sans-mono": "^4.5.1",
+    "http-server": "^13.0.2"
+  }
+}

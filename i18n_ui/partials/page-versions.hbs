@@ -1,0 +1,14 @@
+{{#with page.versions}}
+  <div class="toolbar"><img class="icon" src="../../_/img/globe.svg">
+  </div>
+<div class="page-versions">
+  <button id="page-lang" class="version-menu-toggle" title="Show other translations of page">{{@root.page.componentVersion.displayVersion}}</button>
+  <div class="version-menu">
+    {{#each this}}
+    <a class="version
+              {{~#if (eq ./version @root.page.version)}} is-current{{/if~}}
+              {{~#if ./missing}} is-missing{{/if}}" href="{{{relativize ./url}}}">{{./displayVersion}}</a>
+    {{/each}}
+  </div>
+</div>
+{{/with}}

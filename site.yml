@@ -1,0 +1,32 @@
+site:
+  title: "Inland Ecdis Manual"
+  url: https://opencpn-manuals.github.io/inland-ecdis/
+  start_page: en@manuals:ROOT:index.adoc
+
+asciidoc:
+  attributes:
+    icons: font
+    skip-front-matter: true
+antora:
+  extensions:
+    languages: [en, fr]
+content:
+  sources:
+  - url: https://github.com/opencpn-manuals/inland-ecdis-docs.git
+    start_paths:
+      - fr
+      - en
+    branches:
+      - main
+ui:
+  bundle:
+    url: https://gitlab.com/antora-ui-custom/antora-ui-i18n/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+
+    #url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+   # snapshot: true
+  #supplemental_files: ./i18n_ui
+  supplemental_files: ./supplemental_ui
+output:
+  dir: ./docs
+  clean: true
