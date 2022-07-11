@@ -1,5 +1,5 @@
 site:
-  title: "inland-ecdis"
+  title: "Basic Manual"
   url: https://localhost/
   start_page: en@manuals:ROOT:index.adoc
 
@@ -14,7 +14,7 @@ antora:
 content:
   edit_url: true
   sources:
-  - url: https://github.com/opencpn-manuals/inland-ecdis-docs.git
+  - url: https://github.com/opencpn-manuals/basic-docs.git
     start_paths:
       - fr
       - en
