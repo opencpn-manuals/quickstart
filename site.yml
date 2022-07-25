@@ -1,6 +1,6 @@
 site:
-  title: "Basic Manual"
-  url: https://opencpn-manuals.github.io/basic/
+  title: "QuickStart Manual"
+  url: https://opencpn-manuals.github.io/quickstart/
   start_page: en@manuals:ROOT:index.adoc
 
 asciidoc:
@@ -12,7 +12,7 @@ antora:
     languages: [en, fr]
 content:
   sources:
-  - url: https://github.com/opencpn-manuals/basic-docs.git
+  - url: https://github.com/opencpn-manuals/quickstart-docs.git
     start_paths:
       - fr
       - en
@@ -20,7 +20,7 @@ content:
       - main
 ui:
   bundle:
-    url: https://gitlab.com/antora-ui-custom/antora-ui-i18n/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: ./ui-bundle.zip
     snapshot: true
 
     #url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
