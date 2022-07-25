@@ -23,7 +23,7 @@ content:
       - main
 ui:
   bundle:
-    url: https://gitlab.com/antora-ui-custom/antora-ui-i18n/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: ./build/ui-bundle.zip
     #snapshot: true
     #url: ../antora-ui-default/build/ui-bundle.zip
     #supplemental_files: ./node_modules/@antora/lunr-extension/supplemental_ui
