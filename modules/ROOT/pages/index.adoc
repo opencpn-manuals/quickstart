@@ -1,4 +1,4 @@
-= Inland Ecdis Manual
+= QuickStart Manual
 
 xref:manual_en::index.adoc[English Manual]
 
