@@ -33,3 +33,9 @@ if [[ "$orig_subject" == *full?linkcheck* ]]; then
 fi
 git commit -q -m "$msg"
 git push -f origin gh-pages:gh-pages
+
+git checkout gh-pages
+git checkout build -- ./manuals
+git push -f
+git commit -m "add globe"
+git push
