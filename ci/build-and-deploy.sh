@@ -34,7 +34,7 @@ fi
 git commit -q -m "$msg"
 git push -f origin gh-pages:gh-pages
 
-git checkout build -- ./manuals
+git checkout origin build -- ./manuals
 git push -f
 git commit -m "add globe"
 git push
