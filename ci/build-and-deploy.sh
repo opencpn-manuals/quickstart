@@ -14,6 +14,12 @@ antora -v
 antora site.yml
 touch docs/.nojekyll
 
+git mv ./_ ./docs/manuals
+#git push -f
+#git commit -m "add globe"
+#git push
+
+
 # Set up a git environment in docs
 orig_subject=$(git log -1 --oneline $FETCH_HEAD)
 author_email=$(git log -1 --pretty=format:"%ae")
@@ -33,8 +39,3 @@ if [[ "$orig_subject" == *full?linkcheck* ]]; then
 fi
 git commit -q -m "$msg"
 git push -f origin gh-pages:gh-pages
-
-git checkout build ./manuals
-git push -f
-git commit -m "add globe"
-git push
